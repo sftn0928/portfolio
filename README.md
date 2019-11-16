@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # portfolio
 
 > My ultimate Nuxt.js project
@@ -20,3 +21,7 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+=======
+# Potfolio
+My portfolio using Nuxt.js
+>>>>>>> origin/master
