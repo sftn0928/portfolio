@@ -17,7 +17,6 @@ export default {
 <style>
 .top-content {
     color: white;
-    background-color: rgb(45, 167, 189);
     margin: 0 auto;
     text-align: center;
     background-image: url("../assets/img/top.jpg");
