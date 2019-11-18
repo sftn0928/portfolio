@@ -1,10 +1,6 @@
 <template>
     <div id="Top" class="top-content" >
         <h1 id="title">{{ title }}</h1>
-        <h2 id="message">{{ message }}</h2>
-        <nuxt-link v-scroll-to="'#About'" to>
-            <i class="far fa-hand-point-down "></i>
-        </nuxt-link>
     </div>
 </template>
 
@@ -13,7 +9,6 @@ export default {
     data (){
         return {
             title: "Welcome to Yosuke's portfolio",
-            message: 'Please drag down'
         }
     }
 }
@@ -25,7 +20,10 @@ export default {
     background-color: rgb(45, 167, 189);
     margin: 0 auto;
     text-align: center;
+    background-image: url("../assets/img/top.jpg");
+    background-size: contain;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding-bottom: 300px;
 }
 
 #title {
@@ -34,50 +32,25 @@ export default {
     border-bottom: 2px solid white;
 }
 
-#message {
-     font-size: 3.0em;
-     padding: 100px 0 0 0;
-}
-
-.far {
-    color: white;
-    font-size: 3.5em;
-    line-height: 150px;
-    padding-bottom: 30px;
-}
-
-.far:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
 /* タブレット用 */
 @media screen and (max-width: 1248px) {
- 
+    .top-content {
+        background-size: cover;
+    }
+    
     #title {
         font-size: 3.4em;
-    }
-    #message {
-        font-size:  2.5em;
-    }
-
-    .far {
-        font-size: 3.0em;
     }
 }
 
 /* スマートフォン用 */
 @media screen and (max-width: 767px) {
- 
-    #title {
-        font-size: 2.8em;
-    }
-    #message {
-        font-size:  2.0em;
+    .top-content {
+        background-size: cover;
     }
 
-    .far {
-        font-size: 2.6em;
+    #title {
+        font-size: 2.8em;
     }
 }
 
