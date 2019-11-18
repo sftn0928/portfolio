@@ -24,13 +24,13 @@ export default {
                     imgUrl: require('~/assets/img/portfolio.png'), 
                     title: 'portfolio', 
                     sentence: 'Nuxt.jsで作成したポートフォリオです。', 
-                    workUrl: "https://github.com/KobayashiYosuke7/portfolio"
+                    workUrl: "https://unruffled-mcclintock-bf4292.netlify.com/"
                 },
                 {
                     imgUrl: require('~/assets/img/stop.png'), 
                     title: '作成中', 
                     sentence: '次回作に期待', 
-                    workUrl: "https://github.com/KobayashiYosuke7/portfolio"
+                    workUrl: ""
                 }
             ],
 
