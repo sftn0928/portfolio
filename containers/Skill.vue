@@ -28,7 +28,7 @@ export default {
                 {name: 'Vue.js/Nuxt.js', level: '★☆☆'},
                 {name: 'C', level: '★☆☆'},
                 {name: 'Java', level: '★☆☆'},
-                {name: 'Bottostrap', level: '★★☆'},
+                {name: 'Bootstrap', level: '★★☆'},
                 {name: 'Github', level: '★☆☆'},
             ]
         }
