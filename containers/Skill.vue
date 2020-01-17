@@ -29,7 +29,7 @@ export default {
                 {name: 'C', level: '★☆☆'},
                 {name: 'Java', level: '★☆☆'},
                 {name: 'Bootstrap', level: '★★☆'},
-                {name: 'Github', level: '★☆☆'},
+                {name: 'Ruby', level: '★★☆'},
             ]
         }
     }
