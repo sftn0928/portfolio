@@ -1,74 +1,135 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <v-app dark>
+    <div class="header-wrapper my50" v-show="isShow">
+      <v-navigation-drawer
+        v-model="drawer"
+        :clipped="clipped"
+        :temporary="temporary"
+        fixed
+        app
+      >
+        <v-list>
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            :to="item.to"
+            router
+            exact
+          >
+            <v-list-item-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title" />
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+      <v-app-bar :clipped-left="clipped" class="header" fixed app>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+        <v-spacer />
+        <v-toolbar-title v-text="title" class="header-title" />
+        <v-spacer />
+      </v-app-bar>
+    </div>
+
+    <v-container>
+        <nuxt />
+    </v-container>
+    <v-footer class="footer-wrapper" v-if="isShow">
+      <v-row justify="center">
+        <v-btn
+          v-for="(item, i) in items"
+          :key="i"
+          color="white"
+          text
+          :to="item.to"
+          rounded
+          class="mx-2 my-2"
+        >
+          {{ item.title }}
+        </v-btn>
+      </v-row>
+      <v-col class="text-center" cols="12">
+        <v-btn
+          class="mx-10"
+          v-for="icon in icons"
+          :key="icon.type"
+          :href="icon.url"
+          :to="icon.link"
+          fab
+          large
+          icon
+        >
+          <v-icon>{{ icon.type }}</v-icon>
+        </v-btn>
+      </v-col>
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,p,h1,h2,h3,h4 {
-    margin: 0px;
-    padding: 0px;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-img {
-    height: 100%;
-    width: 100%;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-
-@media screen and (max-width : 767px) {
-  html,
-  body {
-    overflow-x: hidden!important;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+<script>
+export default {
+  // render: {
+  //   hideEvent() {
+  //     var currentPath = location.pathname;
+  //     return currentPath === "/" ? (this.isShow = false) : (this.isShow = true);
+  //     console.log(currentPath);
+  //   }
+  // },
+  data() {
+    return {
+      title: "Welcome to Yosuke's portfolio",
+      clipped: false,
+      drawer: false,
+      temporary: true,
+      fixed: false,
+      isShow: true,
+      items: [
+        {
+          title: "Top",
+          to: "/"
+        },
+        {
+          title: "About",
+          to: "/About"
+        },
+        {
+          title: "Career",
+          to: "/Career"
+        },
+        {
+          title: "Skill",
+          to: "/Skill"
+        },
+        {
+          title: "Works",
+          to: "/Works"
+        },
+        {
+          title: "Contact",
+          to: "/Contact"
+        }
+      ],
+      icons: [
+        { type: "mdi-twitter", url: "https://twitter.com/youyoutennis928" },
+        { type: "mdi-github", url: "https://github.com/sftn0928" },
+        { type: "mdi-email", link: "/Contact" }
+      ]
+    };
   }
+};
+</script>
+<style>
+.header-wrapper {
+  margin-bottom: 50px;
+}
+
+.header-title {
+  font-size: 26px;
+}
+
+.footer-wrapper {
+  margin-top: 50px;
 }
 </style>

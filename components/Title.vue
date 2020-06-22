@@ -7,30 +7,28 @@
 <script>
 export default {
     props: {
-        title: {
-            
-        }
+        title: String
     }
 }
 </script>
 
 <style>
-.title {
-    margin: 100px 0 50px 0;
-    text-align: center;
-}
 
-.title h2 {
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.title  h2 {
     border-bottom: 4px solid rgb(255, 163, 25);
     display: inline-block;
     font-family:  Ryumin Medium KL;
-    font-size: 3.0em;
+    font-size: 2.4em;
 }
 
 /* スマートフォン用 */
 @media screen and (max-width: 767px) {
     .title h2 {
-        font-size: 2.5em;
+        font-size: 1.8em;
     }
 }
 </style>

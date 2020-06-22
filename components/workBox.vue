@@ -1,58 +1,79 @@
 <template>
-    <div class="work-box">
-        <div class="work-cord">
-            <div><img :src="item.imgUrl" alt="イメージ画像" ></div>
-            <div class="work-card-content">
-                <h3 class="card-title">{{ item.title }}</h3>
-                <p class="card-sentence">{{ item.sentence }}</p>
-                <a :href="item.workUrl" class="detail btn btn-outline-info" 
-                    target="_blank" rel="noopner">詳細</a>
-            </div>
+  <v-container>
+    <v-row>
+      <v-col cols="12" md="6" v-for="(item, index) in items" :key="index">
+        <div class="fade-in-el" v-scroll-inview:fadeIn>
+        <v-card class="mx-auto work-card" max-width="400" outlined tile>
+          <v-img
+            class="white--text align-end"
+            height="auto"
+            :src="item.imgUrl"
+            alt="イメージ画像"
+          >
+          </v-img>
+          <v-card-title>{{ item.title }}</v-card-title>
+          <v-card-text class="text--primary">
+            <div>{{ item.sentence }}</div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              class="work-btn"
+              color="secondary"
+              :href="item.workUrl"
+              target="_blank"
+              rel="noopner"
+              @click.stop="item.workUrl === '' ? dialog = true : dialog = false"
+              >詳細
+            </v-btn>
+          </v-card-actions>
+        </v-card>
         </div>
-    </div>
+      </v-col>
+      <v-dialog v-model="dialog" max-width="400">
+        <v-card work-card>
+          <v-card-title>まだリリースしてません!</v-card-title>
+          <v-card-text>
+            気長に待っててね.
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="secondary" text @click="dialog = false">
+              OK
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
-    props: {
-        item: { 
-            
-        },
-    }
-}
+  props: {
+    items: Array
+  },
+  data() {
+    return {
+      fadeInOption: {
+        delay: 5
+      },
+      item: Object,
+      dialog: false
+    };
+  }
+};
 </script>
 
 <style>
-.work-box {
-    text-align: center;
+.work-card {
+  margin-bottom: 40px;
+}
+.work-card:hover {
+  box-shadow: 0 0 15px rgba(117, 117, 117, 0.253);
 }
 
-.work-cord {
-    margin: 50px auto;
-    width: 50%;
-    border: 1px solid gray;
-}
-
-.card-title {
-    padding-top: 15px;
-}
-
-.work-card-content {
-    border-top: 1px solid gray;
-}
-
-.detail {
-    margin: 10px 0;
-}
-
-/* スマートフォン用 */
-@media screen and (max-width: 767px) {
-    .work-cord {
-        width: 75%;
-        font-size: 0.8em;
-    }
-    .card-title {
-       font-size: 1.5em;
-    }
+.work-btn {
+  margin: 10px auto;
+  text-align: center;
 }
 </style>
