@@ -1,9 +1,3 @@
-<!-- <div class="career-wrapper">
-        <Title title='Career' id="Career"/>
-        <div class="career">
-            <b-table :items="career_content" :fields="career_fields"></b-table>
-        </div>
-    </div> -->
 
 <template>
   <div class="career-wrapper">
