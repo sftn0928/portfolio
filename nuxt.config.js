@@ -18,7 +18,7 @@ export default {
       }
     ]
   },
-  generate: {},
+  // generate: {},
   /*
    ** Customize the progress-bar color
    */
@@ -67,6 +67,7 @@ export default {
    ** Build configuration
    */
   build: {
+    publish: /opt/build/repo/dist,
     /*
      ** You can extend webpack config here
      */
