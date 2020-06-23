@@ -16,8 +16,9 @@ export default {
         name: "description",
         content: process.env.npm_package_description || ""
       }
-    ],
+    ]
   },
+  generate: {},
   /*
    ** Customize the progress-bar color
    */
@@ -32,7 +33,7 @@ export default {
   plugins: [
     "~plugins/scrollInview.js"
     // "~plugins/observe-visibility"
-   ],
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -58,7 +59,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        },
+        }
       }
     }
   },
