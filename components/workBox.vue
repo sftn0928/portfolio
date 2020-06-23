@@ -33,12 +33,12 @@
         <v-card work-card>
           <v-card-title>まだリリースしてません!</v-card-title>
           <v-card-text>
-            気長に待っててね.
+            気長に待っててね。
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="secondary" text @click="dialog = false">
-              OK
+              OK!
             </v-btn>
           </v-card-actions>
         </v-card>
