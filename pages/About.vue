@@ -64,13 +64,7 @@ export default {
 <style>
 .about-content {
   text-align: center;
-}
-
-.about-content {
   padding: 20px 0;
 }
 
-/* スマートフォン用 */
-@media screen and (max-width: 767px) {
-}
 </style>

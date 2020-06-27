@@ -3,7 +3,6 @@
     <Title title="Contact" id="Contact" />
     <div class="fade-in-el" v-scroll-inview:fadeIn>
       <v-form
-        class="contact-content"
         name="contactForm"
         action="https://docs.google.com/forms/d/e/1FAIpQLSdLS3bLAOutJ0GuU9YRHdMbb4pDFe6nVjYySt8dSWXdgu8c4w/formResponse"
         method="post"
@@ -101,11 +100,10 @@ export default {
 </script>
 
 <style>
-.contact-content {
-  margin: 0 23%;
-}
+
 .form-group {
   margin: 40px 0 10px 0;
+  margin: 0 23%;
 }
 
 textarea {
@@ -124,6 +122,9 @@ textarea {
 @media screen and (max-width: 767px) {
   .contact-title {
     font-size: 1.5em;
+  }
+  .form-group {
+     margin: 0 10%;
   }
 }
 </style>

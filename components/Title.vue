@@ -18,7 +18,7 @@ export default {
     text-align: center;
     margin-bottom: 60px;
 }
-.title  h2 {
+.title > h2 {
     border-bottom: 4px solid rgb(255, 163, 25);
     display: inline-block;
     font-family:  Ryumin Medium KL;

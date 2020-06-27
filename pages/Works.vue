@@ -26,6 +26,12 @@ export default {
           workUrl: "https://sftn0928.netlify.com"
         },
         {
+          imgUrl: require("~/assets/images/fablechord.png"),
+          title: "FableChord",
+          sentence: "初めて担当したWeb制作案件です。デザインは外部に委託しました。",
+          workUrl: "http://fablechord.com/"
+        },
+        {
           imgUrl: require("~/assets/images/YouTubeLiveApp.png"),
           title: "YouTubeライブアンケート(6月中にデプロイ予定）",
           sentence:
