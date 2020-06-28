@@ -28,7 +28,7 @@ export default {
         {
           imgUrl: require("~/assets/images/calculator.png"),
           title: "calculator",
-          sentence: "大学の課題の簡易電卓です。JavaScript＋Bootstrap4で作成しました。",
+          sentence: "大学の課題で作成した簡易電卓です。JavaScript＋Bootstrap4で作成しました。",
           workUrl: "https://sftn0928.github.io/calculator/"
         },
         {
