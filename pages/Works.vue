@@ -26,6 +26,12 @@ export default {
           workUrl: "https://sftn0928.netlify.com"
         },
         {
+          imgUrl: require("~/assets/images/calculator.png"),
+          title: "calculator",
+          sentence: "大学の課題の簡易電卓です。JavaScript＋Bootstrap4で作成しました。",
+          workUrl: "https://sftn0928.github.io/calculator/"
+        },
+        {
           imgUrl: require("~/assets/images/fablechord.png"),
           title: "FableChord",
           sentence: "初めて担当したWeb制作案件です。デザインは外部に委託しました。",
