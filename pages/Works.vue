@@ -28,7 +28,7 @@ export default {
         {
           imgUrl: require("~/assets/images/calculator.png"),
           title: "calculator",
-          sentence: "大学の課題の簡易電卓です。JavaScript＋Bootstrap4で作成しました。",
+          sentence: "大学の課題で作成した簡易電卓です。JavaScript＋Bootstrap4で作成しました。",
           workUrl: "https://sftn0928.github.io/calculator/"
         },
         {
@@ -39,7 +39,7 @@ export default {
         },
         {
           imgUrl: require("~/assets/images/YouTubeLiveApp.png"),
-          title: "YouTubeライブアンケート(6月中にデプロイ予定）",
+          title: "YouTubeライブアンケート(7月中にデプロイ予定）",
           sentence:
             "YouTubeの生放送中にコメントを集計して、アンケートを実施するアプリです。Nuxt.js＋Expressで作成。３人１組のハッカソンで作成しました。私は主にフロントエンドを担当して、少しだけバックも書きました。",
           workUrl: ""
