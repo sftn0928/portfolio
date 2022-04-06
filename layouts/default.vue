@@ -112,7 +112,7 @@ export default {
         }
       ],
       icons: [
-        { type: "mdi-twitter", url: "https://twitter.com/youyoutennis928" },
+        { type: "mdi-twitter", url: "https://twitter.com" },
         { type: "mdi-github", url: "https://github.com/sftn0928" },
         { type: "mdi-email", link: "/Contact" }
       ]
